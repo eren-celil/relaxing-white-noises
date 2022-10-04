@@ -26,6 +26,12 @@
     background-color: blue;
     height: 50vh;
     width: 20%;
+    overflow: hidden;
+}
+.sleep-text{
+    position: absolute;
+    z-index: 1;
+    color: white;
 }
 
 .study {
@@ -44,9 +50,4 @@
     background-color: blue;
     height: 50vh;
     width: 20%;
-}
-
-
-.sleep-img {
-    
 }
