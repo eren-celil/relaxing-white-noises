@@ -31,7 +31,7 @@
     font-size: 28px;
 
 }
-.sleep-text{
+.button-text{
     position: absolute;
     z-index: 1;
     color: white;
@@ -49,12 +49,6 @@
    
 }
 
-.study-text{
-    position: absolute;
-    z-index: 1;
-    color: white;
-}
-
 .chill {
     display: flex;
     justify-content: center;
@@ -63,4 +57,5 @@
     height: 50vh;
     width: 20%;
     font-size: 28px;
+    overflow: hidden;
 }
