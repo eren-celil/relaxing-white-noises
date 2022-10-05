@@ -10,7 +10,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
+    font-size: 64px;
+    font-family: 'Smooch', cursive;
+    margin: 30px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: aliceblue;
 }
 
 .main-section {
@@ -20,7 +24,7 @@
     align-items: center;
 }
 
-.sleep {
+.voice-card {
     display: flex;
     justify-content: center;
     color:white;
@@ -29,7 +33,8 @@
     width: 20%;
     overflow: hidden;
     font-size: 28px;
-
+    border-radius: 30px;
+    transition: 0.3s;
 }
 .button-text{
     position: absolute;
@@ -37,25 +42,7 @@
     color: white;
 }
 
-.study {
-    display: flex;
-    justify-content: center;
-    color:white;
-    background-color: blue;
-    height: 50vh;
-    width: 20%;
-    overflow: hidden;
-    font-size: 28px;
-   
-}
-
-.chill {
-    display: flex;
-    justify-content: center;
-    color: white;
-    background-color: blue;
-    height: 50vh;
-    width: 20%;
-    font-size: 28px;
-    overflow: hidden;
+.voice-card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
