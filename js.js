@@ -1,7 +1,13 @@
+const audio = new Audio("./chill.mp3")
+
 function playAudioChill(){
-    var audio = new Audio("./chill.mp3")
-    audio.play()
-    console.log(audio)
+    
+    if(audio.paused){
+        audio.play();
+    }
+    else{
+    audio.pause();}
+    console.log(audio);
     }
     
     
