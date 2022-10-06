@@ -4,15 +4,20 @@ const audio = new Audio("./chill.mp3")
 
 function playAudioChill(){
     
+    
+   audio.loop = true;
     if(audio.paused){
         audio.play();
     }
     else{
     audio.pause();}
-    console.log(audio);
     }
     
     // activating focus effect
+  
+   
+   
+   
     const cards = document.querySelectorAll('.voiceCard');
 
 cards.forEach ((voiceCard) => {
