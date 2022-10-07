@@ -88,4 +88,5 @@
     transform: scale(1.05);
     filter:saturate(2);
     transition: 0.5s;
+    flex:0.8;
 }
