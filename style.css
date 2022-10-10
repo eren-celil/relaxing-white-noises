@@ -33,7 +33,7 @@
 .voiceCard {
     display: flex;
     justify-content: center;
-    color:white;
+    color:rgb(255, 255, 255);
     height: 50vh;
     width: 20%;
     overflow: hidden;
@@ -80,7 +80,7 @@
 .button-text{
     position: absolute;
     z-index: 1;
-    color: white;
+    color: rgb(207, 228, 247);
 }
 
 .voiceCard:hover{
