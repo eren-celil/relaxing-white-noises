@@ -1,5 +1,5 @@
     // play stop audio
-let play = document.querySelector('.play').src;
+let play = document.getElementById('play').src;
 
 
 
@@ -58,11 +58,11 @@ function removeActiveClasses() {
 
 
 function change() {
-    if (play == "./play.png"){
-        play = "./pause.png";
+    if (play == "play.png"){
+        play = "pause.png";
         console.log( play);
     } else {
-        play = "./play.png";
+        play = "play.png";
         console.log( play);
     }
 }
