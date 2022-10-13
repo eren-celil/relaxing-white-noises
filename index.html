@@ -9,13 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 <body>
     
     <div class="header">Relaxing White Noises</div>
     <section class="main-section">
-        <div class="voiceCard" onclick="stopAudio(audioSleep), playAudio(audioSleep)"><img class="sleep-img" src="sleep.webp"></img> <div class="button-text">Sleep</div> </div>
+        <div class="voiceCard" onclick="stopAudio(audioSleep), playAudio(audioSleep)"><img class="sleep-img" src="sleep.webp"></img>
+            <img class="play" src="./play.png" onclick="change()">
+             <div class="button-text">Sleep</div> </div>
         <div class="voiceCard" onclick="stopAudio(audioStudy), playAudio(audioStudy)"><img class="study-img" src="study.jpeg"></img><div class="button-text">Study</div> </div>
         <div class="voiceCard" onclick="stopAudio(audioChill), playAudio(audioChill)"><img class="chill-img" src="chillz.webp"></img><div class="button-text">Chill</div></div>
     </section>

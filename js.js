@@ -1,4 +1,9 @@
     // play stop audio
+let play = document.querySelector('.play').src;
+
+
+
+
 
 const audioChill = new Audio("./chill.mp3");
 const audioStudy = new Audio("./study.mp3");
@@ -48,4 +53,16 @@ function removeActiveClasses() {
     cards.forEach(voiceCard => {
         voiceCard.classList.remove('active')
     })
+}
+
+
+
+function change() {
+    if (play == "./play.png"){
+        play = "./pause.png";
+        console.log( play);
+    } else {
+        play = "./play.png";
+        console.log( play);
+    }
 }
