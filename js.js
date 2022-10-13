@@ -1,10 +1,3 @@
-    // play stop audio
-let play = document.getElementById('play').src;
-
-
-
-
-
 const audioChill = new Audio("./chill.mp3");
 const audioStudy = new Audio("./study.mp3");
 const audioSleep = new Audio("./rain.mp3");
@@ -56,13 +49,16 @@ function removeActiveClasses() {
 }
 
 
+var image =  document.getElementById("play");
 
-function change() {
-    if (play == "play.png"){
-        play = "pause.png";
-        console.log( play);
-    } else {
-        play = "play.png";
-        console.log( play);
-    }
-}
+            function changeColor()
+            {
+                if (image.getAttribute('src') == "play.png")
+                {
+                    image.src = "pause.png";
+                }
+                else
+                {
+                    image.src = "play.png";
+                }
+            }
