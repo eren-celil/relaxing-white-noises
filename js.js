@@ -1,17 +1,22 @@
-const audioChill = new Audio("./chill.mp3");
-const audioStudy = new Audio("./study.mp3");
-const audioSleep = new Audio("./rain.mp3");
+const audio = document.querySelector("audio")
+const audioCard = document.getElementsByClassName('voiceCard');
 const allAudioStop = document.querySelectorAll('audio').forEach(el => el.pause());
 
-
-function playAudio(audio){
+function playAudio(source){
+    if(audio.getAttribute("src") != source){
+        audio.src = source;
+    }
+    
     audio.loop = true;
+
     if(audio.paused){
-        audio.play();
+        audio.play();   
+        
     }
     else{
-    audio.pause();}
-    }
+    audio.pause();
+    }};
+
     
     
   
@@ -62,3 +67,15 @@ var image =  document.getElementById("play");
                     image.src = "play.png";
                 }
             }
+
+
+            audio.addEventListener("timeupdate",() =>{
+                let percentage = audio.currentTime/audio.duration*100;
+                let progress = `background-image: conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%),conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%);`;
+                for(var i = 0 ; i < audioCard.length ; i++){
+                    audioCard[i].style = progress;
+                }
+             
+            });
+            
+ 

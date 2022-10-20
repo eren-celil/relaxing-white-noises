@@ -41,13 +41,18 @@
     width: 20%;
     overflow: hidden;
     font-size: 28px;
-    margin: 30px;
-    border-radius: 30px;  
+    margin: 30px; 
     flex: 0.5;
     position: relative;
     transition: flex 0.5s ease-in;
+    border: hidden;
+    border-radius: 30px;
+    background-image: conic-gradient(#4618de 36%, #bbb 36%),conic-gradient(#4618de 36%, #bbb 36%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
     
 }
+
 
 .voiceCard.active {
     display: flex;
@@ -59,6 +64,7 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    border: double 5px transparent;
   top: 0;
   left: 0;
   
