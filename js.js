@@ -17,26 +17,9 @@ function playAudio(source){
     audio.pause();
     }};
 
-    
-    
-  
-function stopAudio(audio){
-    if (audio == audioChill){
-        audioStudy.pause();
-        audioSleep.pause();
-    }
-    if (audio == audioStudy){
-        audioChill.pause();
-        audioSleep.pause();
-    }
-    if (audio == audioSleep){
-        audioStudy.pause();
-        audioChill.pause();
-    }
-}
    // activating focus effect
    
-    const cards = document.querySelectorAll('.voiceCard');
+const cards = document.querySelectorAll('.voiceCard');
 
 cards.forEach ((voiceCard) => {
 
@@ -67,15 +50,11 @@ var image =  document.getElementById("play");
                     image.src = "play.png";
                 }
             }
-
-
-            audio.addEventListener("timeupdate",() =>{
-                let percentage = audio.currentTime/audio.duration*100;
-                let progress = `background-image: conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%),conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%);`;
-                for(var i = 0 ; i < audioCard.length ; i++){
-                    audioCard[i].style = progress;
-                }
-             
-            });
+audio.addEventListener("timeupdate",() =>{
+let percentage = audio.currentTime/audio.duration*100;
+let progress = `background-image: conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%),conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%);`;
+for(var i = 0 ; i < audioCard.length ; i++){
+    audioCard[i].style = progress;
+}});
             
  
