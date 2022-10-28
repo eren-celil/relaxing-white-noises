@@ -41,7 +41,7 @@
     width: 20%;
     overflow: hidden;
     font-size: 28px;
-    margin: 30px; 
+    margin: 15px; 
     flex: 0.5;
     position: relative;
     transition: flex 0.5s ease-in;
@@ -55,9 +55,7 @@
 
 
 .voiceCard.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     flex:0.8;
     margin: 30px;
     background-size: auto 100%;
@@ -67,6 +65,7 @@
     border: double 5px transparent;
   top: 0;
   left: 0;
+  
   
 }
 
