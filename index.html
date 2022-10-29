@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
 </head>
 <body>
@@ -22,13 +23,42 @@
              <div class="button-text">Sleep</div> </div>
         <div class="voiceCard" onclick="playAudio('./study.mp3')"><img class="study-img" src="study.jpeg"></img><div class="button-text">Study</div> </div>
         <div class="voiceCard" onclick="playAudio('./chill.mp3')"><img class="chill-img" src="chillz.webp"></img><div class="button-text">Chill</div></div>
+
+        <div class="contact-us hidden">
+            <img class="x" src="x-mark.svg" onclick="contact_popup()">
+            <span class="contact-into">We two made this website! Hope it works for you! Here are our accounts ⬇️</span> 
+            
+            <div class="account-celil">
+                <img class="celil" src="celil.jpg">
+              <a href="https://github.com/Celil6p"> <img class="icon-celil git-celil" src="github.svg"></a>
+              <a href="https://twitter.com/ALTPRMK_Celil"><img class="icon-eren git-eren twt" src="twitter.svg"> </a>
+            </div>
+            <div class="account-eren">
+                <img class="eren" src="eren.jpeg">
+                <a href="https://github.com/Celil6p"> <img class="icon-eren git-eren" src="github.svg"> </a>
+
+                <a href="https://twitter.com/35ereneroglu"><img class="icon-eren git-eren twt" src="twitter.svg"> </a>
+            </div>
+
+            
+        </div>
     </section>
 
 
     <!-- Section 2-->
-    
+    <section class="section-iki">
+        <span class="which-song"></span>
+
+
+
+
+        
+    </section>
     
      <!-- Section 2 Ending-->
+     <div class="profiles">
+    <button class="contact" onclick="contact_popup()">Contact Us</button>
+    </div>
 <audio src=""></audio>
 <script src="js.js"></script>    
 </body>

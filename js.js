@@ -20,12 +20,19 @@ function playAudio(source){
    // activating focus effect
    
 const cards = document.querySelectorAll('.voiceCard');
-
+const info = document.querySelector('.which-song');
 cards.forEach ((voiceCard) => {
 
     voiceCard.addEventListener('click', () => {
         removeActiveClasses()
         voiceCard.classList.add('active')
+        if(audio.getAttribute("src") == './rain.mp3'){
+            info.textContent = "Good night, sleep tight, don't let the bedbugs bite...🌙"
+        }else  if(audio.getAttribute("src") == './study.mp3'){
+            info.textContent = "Have an efficient day...👨‍💻"
+        }else  if(audio.getAttribute("src") == './chill.mp3'){
+            info.textContent = 'Just relax...🕯️';
+        }
     })
 } ) 
 
@@ -58,3 +65,13 @@ for(var i = 0 ; i < audioCard.length ; i++){
 }});
             
  
+const contact = document.querySelector('.contact-us');
+
+function contact_popup() {
+        if(contact.classList.contains('hidden')){
+        contact.classList.remove('hidden')
+        
+        }else{
+            contact.classList.add('hidden')
+        }
+    }
