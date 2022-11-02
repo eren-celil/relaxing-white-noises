@@ -66,12 +66,26 @@ for(var i = 0 ; i < audioCard.length ; i++){
             
  
 const contact = document.querySelector('.contact-us');
-
+const voiceCard = document.querySelectorAll('.voiceCard');
+const header = document.querySelector('.header');
 function contact_popup() {
         if(contact.classList.contains('hidden')){
-        contact.classList.remove('hidden')
+        contact.classList.remove('hidden');
+        voiceCard.forEach((key) => {
+            key.style.filter = " blur(8px)"
+        })
+        header.style.filter = "blur(8px)"
+        
+
         
         }else{
-            contact.classList.add('hidden')
+            contact.classList.add('hidden');
+            header.style.filter = "blur(0px)"
+            voiceCard.forEach((key) => {
+                key.style.filter = " blur(0px)"
+            })
+           
         }
     }
+
+    
