@@ -246,3 +246,14 @@ a{
         height: 75vh;
         width: 75vw;
   }}
+
+  .container_hour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+
+  }

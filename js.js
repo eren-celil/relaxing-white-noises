@@ -89,3 +89,28 @@ function contact_popup() {
     }
 
     
+
+    // clock
+
+    let hours_html = document.querySelector('.hours');
+    let minutes_html = document.querySelector('.minutes');
+    let seconds_html = document.querySelector('.seconds');
+    let date2= new Date();
+
+        function displayTime(){
+            let date = new Date();
+            hours_html.innerHTML = date.getHours();
+            minutes_html.innerHTML = date.getMinutes();
+            function displaySeconds(){
+                if(date.getSeconds() < 10){
+                    seconds_html.innerHTML = `0${date.getSeconds()}`
+                }else{
+                    seconds_html.innerHTML = date.getSeconds();
+                }
+            }displaySeconds();
+            
+        }
+
+        setInterval(displayTime, 10)
+
+        
