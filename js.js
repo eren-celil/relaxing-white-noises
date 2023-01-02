@@ -1,116 +1,87 @@
-const audio = document.querySelector("audio")
-const audioCard = document.getElementsByClassName('voiceCard');
-const allAudioStop = document.querySelectorAll('audio').forEach(el => el.pause());
+const audio = document.querySelector("audio");
+const audioCard = document.getElementsByClassName("voiceCard");
+const allAudioStop = document
+  .querySelectorAll("audio")
+  .forEach((el) => el.pause());
 
-function playAudio(source){
-    if(audio.getAttribute("src") != source){
-        audio.src = source;
-    }
-    
-    audio.loop = true;
+function playAudio(source) {
+  if (audio.getAttribute("src") != source) {
+    audio.src = source;
+  }
 
-    if(audio.paused){
-        audio.play();   
-        
-    }
-    else{
+  audio.loop = true;
+
+  if (audio.paused) {
+    audio.play();
+  } else {
     audio.pause();
-    }};
-
-   // activating focus effect
-   
-const cards = document.querySelectorAll('.voiceCard');
-const info = document.querySelector('.which-song');
-cards.forEach ((voiceCard) => {
-
-    voiceCard.addEventListener('click', () => {
-        removeActiveClasses()
-        voiceCard.classList.add('active')
-        if(audio.getAttribute("src") == './rain.mp3'){
-            info.textContent = "Good night, sleep tight, don't let the bedbugs bite...🌙"
-        }else  if(audio.getAttribute("src") == './study.mp3'){
-            info.textContent = "Have an efficient day...👨‍💻"
-        }else  if(audio.getAttribute("src") == './chill.mp3'){
-            info.textContent = 'Just relax...🕯️';
-        }
-    })
-} ) 
-
-
-function removeActiveClasses() {
-    cards.forEach(voiceCard => {
-        voiceCard.classList.remove('active')
-    })
+  }
 }
 
+// activating focus effect
 
-var image =  document.getElementById("play");
-
-            function changeColor()
-            {
-                if (image.getAttribute('src') == "play.png")
-                {
-                    image.src = "pause.png";
-                }
-                else
-                {
-                    image.src = "play.png";
-                }
-            }
-audio.addEventListener("timeupdate",() =>{
-let percentage = audio.currentTime/audio.duration*100;
-let progress = `background-image: conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%),conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%);`;
-for(var i = 0 ; i < audioCard.length ; i++){
-    audioCard[i].style = progress;
-}});
-            
- 
-const contact = document.querySelector('.contact-us');
-const voiceCard = document.querySelectorAll('.voiceCard');
-const header = document.querySelector('.header');
-function contact_popup() {
-        if(contact.classList.contains('hidden')){
-        contact.classList.remove('hidden');
-        voiceCard.forEach((key) => {
-            key.style.filter = " blur(8px)"
-        })
-        header.style.filter = "blur(8px)"
-        
-
-        
-        }else{
-            contact.classList.add('hidden');
-            header.style.filter = "blur(0px)"
-            voiceCard.forEach((key) => {
-                key.style.filter = " blur(0px)"
-            })
-           
-        }
+const cards = document.querySelectorAll(".voiceCard");
+const info = document.querySelector(".which-song");
+cards.forEach((voiceCard) => {
+  voiceCard.addEventListener("click", () => {
+    removeActiveClasses();
+    voiceCard.classList.add("active");
+    if (audio.getAttribute("src") == "./rain.mp3") {
+      info.textContent =
+        "Good night, sleep tight, don't let the bedbugs bite...🌙";
+    } else if (audio.getAttribute("src") == "./study.mp3") {
+      info.textContent = "Have an efficient day...👨‍💻";
+    } else if (audio.getAttribute("src") == "./chill.mp3") {
+      info.textContent = "Just relax...🕯️";
     }
+  });
+});
 
-    
+function removeActiveClasses() {
+  cards.forEach((voiceCard) => {
+    voiceCard.classList.remove("active");
+  });
+}
 
-    // clock
+var image = document.getElementById("play");
 
-    let hours_html = document.querySelector('.hours');
-    let minutes_html = document.querySelector('.minutes');
-    let seconds_html = document.querySelector('.seconds');
-    let date2= new Date();
+function changeColor() {
+  if (image.getAttribute("src") == "play.png") {
+    image.src = "pause.png";
+  } else {
+    image.src = "play.png";
+  }
+}
+audio.addEventListener("timeupdate", () => {
+  let percentage = (audio.currentTime / audio.duration) * 100;
+  let progress = `background-image: conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%),conic-gradient(#4618de ${percentage}%, #bbb ${percentage}%);`;
+  for (var i = 0; i < audioCard.length; i++) {
+    audioCard[i].style = progress;
+  }
+});
 
-        function displayTime(){
-            let date = new Date();
-            hours_html.innerHTML = date.getHours();
-            minutes_html.innerHTML = date.getMinutes();
-            function displaySeconds(){
-                if(date.getSeconds() < 10){
-                    seconds_html.innerHTML = `0${date.getSeconds()}`
-                }else{
-                    seconds_html.innerHTML = date.getSeconds();
-                }
-            }displaySeconds();
-            
-        }
+const contact = document.querySelector(".contact-us");
+const voiceCard = document.querySelectorAll(".voiceCard");
+const header = document.querySelector(".header");
+function contact_popup() {
+  if (contact.classList.contains("hidden")) {
+    contact.classList.remove("hidden");
+    voiceCard.forEach((key) => {
+      key.style.filter = " blur(8px)";
+    });
+    header.style.filter = "blur(8px)";
+  } else {
+    contact.classList.add("hidden");
+    header.style.filter = "blur(0px)";
+    voiceCard.forEach((key) => {
+      key.style.filter = " blur(0px)";
+    });
+  }
+}
 
-        setInterval(displayTime, 10)
+// clock
 
-        
+let hours_html = document.querySelector(".hours");
+let minutes_html = document.querySelector(".minutes");
+let seconds_html = document.querySelector(".seconds");
+let date2 = new Date();

@@ -1,259 +1,267 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-    body {
-        background-size:auto;
-        background-repeat: no-repeat ;
-        background: rgb(125,35,235);
-        background: radial-gradient(circle, rgba(125,35,235,1) 0%, rgba(148,187,233,1) 100%);
-     }
-   
+body {
+  background-size: auto;
+  background-repeat: no-repeat;
+  background: rgb(125, 35, 235);
+  background: radial-gradient(
+    circle,
+    rgba(125, 35, 235, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
 .header {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 64px;
-    font-family: 'Smooch', cursive;
-    margin: 30px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    color: aliceblue;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  font-family: "Smooch", cursive;
+  margin: 30px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: aliceblue;
 }
 
 .main-section {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .voiceCard {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 0;
-    left: 0;
-    color:rgb(255, 255, 255);
-    height: 50vh;
-    width: 20%;
-    overflow: hidden;
-    font-size: 28px;
-    margin: 15px; 
-    flex: 0.5;
-    position: relative;
-    transition: flex 0.5s ease-in;
-    border: hidden;
-    border-radius: 30px;
-    background-image: conic-gradient(#4618de 36%, #bbb 36%),conic-gradient(#4618de 36%, #bbb 36%);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    
-}
-
-
-.voiceCard.active {
-    
-    flex:0.8;
-    margin: 30px;
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    border: double 5px transparent;
+  display: flex;
+  justify-content: center;
+  position: relative;
   top: 0;
   left: 0;
-  
-  
+  color: rgb(255, 255, 255);
+  height: 50vh;
+  width: 20%;
+  overflow: hidden;
+  font-size: 28px;
+  margin: 15px;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.5s ease-in;
+  border: hidden;
+  border-radius: 30px;
+  background-image: conic-gradient(#4618de 36%, #bbb 36%),
+    conic-gradient(#4618de 36%, #bbb 36%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.voiceCard.active {
+  flex: 0.8;
+  margin: 30px;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border: double 5px transparent;
+  top: 0;
+  left: 0;
 }
 
 .sleep-img {
-    width: 100%;
-     height: 100%; 
-    object-fit: cover; 
-    position: relative;
-    top: 0;
-    left: 0;
-    
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 #play {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 200px;
-    padding: 100px 0px;
-
-
-    
-  
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 200px;
+  padding: 100px 0px;
 }
 
 .study-img {
-    width: 100%;
-     height: 100%; 
-    object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .chill-img {
-    width: 100%;
-     height: 100%; 
-    object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.button-text{
-    position: absolute;
-    z-index: 1;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 4px 6px #8dcbe4;
-}
-
-.voiceCard:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    filter:saturate(2);
-    transition: 0.5s;
-    flex:0.8;
+.button-text {
+  position: absolute;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 4px 6px #8dcbe4;
 }
 
+.voiceCard:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: saturate(2);
+  transition: 0.5s;
+  flex: 0.8;
+}
 
 .section-iki {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .which-song {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 24px;
-    font-style: italic;
-    font-weight: 200;
-
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 200;
 }
 
 .profiles {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 5%;
-    z-index: 500;
-    background: #0F2027;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5%;
+  z-index: 500;
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact {
-    width: 20%;
-    height: 100%;
-    border-style: none;
-    font-size: large;
-    background: #12c2e9;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  width: 20%;
+  height: 100%;
+  border-style: none;
+  font-size: large;
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 12px 1px 19px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 12px 1px 19px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 12px 1px 19px 0px rgba(0, 0, 0, 0.75);
 }
 
 .contact:hover {
-    cursor: pointer;
+  cursor: pointer;
+  box-shadow: 10px -11px 32px -4px rgba(0, 0, 0, 0.93);
+  -webkit-box-shadow: 10px -11px 32px -4px rgba(0, 0, 0, 0.93);
+  -moz-box-shadow: 10px -11px 32px -4px rgba(0, 0, 0, 0.93);
+  filter: brightness(120%);
 }
 
 .contact-us {
-    position: absolute;
-    height: 75vh;
-    width: 50vw;
-    background-color: #40b2d4;
-    z-index: 501;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 2%;
-    background: #FC5C7D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-   
+  position: absolute;
+  height: 75vh;
+  width: 50vw;
+  background-color: #40b2d4;
+  z-index: 501;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2%;
+  background: #fc5c7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #6a82fb,
+    #fc5c7d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6a82fb,
+    #fc5c7d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contact-into {
-    font-size: larger;
-    position: relative;
-    top: 0px;
-    padding-top: 5%;
-    padding: 15px;
+  font-size: larger;
+  position: relative;
+  top: 0px;
+  padding-top: 5%;
+  padding: 15px;
 }
 
 .contact-us.hidden {
-    display: none;
+  display: none;
 }
 
 .contact-p {
-    position: absolute;
-    bottom: 0px;
-    
-    
+  position: absolute;
+  bottom: 0px;
 }
 
-
-a{
-    
-   display:flex;
-   
-   
+a {
+  display: flex;
 }
-.celil, .eren{
-    width: 200px;
-    padding: 5px;
-    left: 1px;
-    border-radius: 100%;
+.celil,
+.eren {
+  width: 200px;
+  padding: 5px;
+  left: 1px;
+  border-radius: 100%;
 }
-.account-celil, .account-eren {
-    display: flex;
-    
+.account-celil,
+.account-eren {
+  display: flex;
 }
-.icon-celil, .icon-eren {
-    
-    color: #4618de;
-    width: 100px;
-    padding: 10px;
+.icon-celil,
+.icon-eren {
+  color: #4618de;
+  width: 100px;
+  padding: 10px;
 }
 
 .x {
-    width: 50px;
-    top: 0px;
-    right: 0px;
-    cursor: pointer;
-    position:absolute;
+  width: 50px;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  position: absolute;
 }
 
 @media only screen and (max-width: 720px) {
-    .twt {
-      display: none;
-    }
-    .contact-us {
-        position: absolute;
-        height: 75vh;
-        width: 75vw;
-  }}
-
-  .container_hour {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    letter-spacing: 2px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    
-
+  .twt {
+    display: none;
   }
+  .contact-us {
+    position: absolute;
+    height: 75vh;
+    width: 75vw;
+  }
+}
+
+.container_hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
