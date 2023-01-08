@@ -166,6 +166,7 @@ body {
   box-shadow: 12px 1px 19px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 12px 1px 19px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 12px 1px 19px 0px rgba(0, 0, 0, 0.75);
+  transition: .2s ease-in-out;
 }
 
 .contact:hover {
